@@ -11,11 +11,19 @@ from io import BytesIO
 from streamlit_extras.metric_cards import style_metric_cards
 import time
 import base64
-import smtplib
-from email.mime.text import MIMEText
-from email.mime.multipart import MIMEMultipart
+# import smtplib
+# from email.mime.text import MIMEText
+# from email.mime.multipart import MIMEMultipart
 
 import zipfile
+
+# Set page config
+st.set_page_config(
+    page_title="Project Management System",
+    page_icon="📋",
+    layout="wide",
+    initial_sidebar_state="expanded"
+)
 
 # File paths
 USER_FILE = 'users.xlsx'
@@ -1239,13 +1247,7 @@ def main():
     # Initialize data files
     initialize_data_files()
     
-    # Set page config
-    st.set_page_config(
-        page_title="Project Management System",
-        page_icon="📋",
-        layout="wide",
-        initial_sidebar_state="expanded"
-    )
+    
     
     # Parse URL parameters for password reset
     # query_params = st.query_params()
